@@ -36,20 +36,22 @@ html, body, #root {
 
 .baby-img {
   max-width: 250px;
+  width: 100%;
   height: auto;
 }
 
 .main-title {
   color: #f79c78;
-  font-size: 3.5rem; /* Slightly reduced */
-  margin-top: 15px; /* Reduced from 20px */
+  font-size: 3.5rem; /* Base size for desktop */
+  margin-top: 15px;
+  text-align: center;
 }
 
 /* Adjust milestones container to fit within the viewport */
 .milestones-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Slightly reduced gap */
+  gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -60,16 +62,18 @@ html, body, #root {
 .milestone-item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0px;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
 }
 
 .milestone-icon {
-  width: 110px; /* Increased from 70px */
-  height: 110px; /* Increased from 70px */
+  width: 110px;
+  height: 110px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  flex-shrink: 0; /* Prevents icon from shrinking */
 }
 
 .teddy-icon {
@@ -91,7 +95,7 @@ html, body, #root {
 .milestone-title {
   color: #5a4a42;
   font-size: 2rem;
-  margin: 0 0 5px 0; /* Reduced from 10px */
+  margin: 0 0 5px 0;
 }
 
 .milestone-description {
@@ -107,7 +111,7 @@ html, body, #root {
   background-image: url('/images/star.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.8; /* Make stars slightly transparent for a softer look */
+  opacity: 0.8;
 }
 
 /* Updated and additional star positions */
@@ -137,9 +141,135 @@ html, body, #root {
 }
 
 body {
-  background-color: #fff9f2; /* Match the container background for even appearance */
+  background-color: #fff9f2;
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
+}
+
+/* Responsive Media Queries */
+/* Large Tablets */
+@media (max-width: 1024px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .milestone-icon {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .milestone-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small Tablets */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .milestones-container {
+    gap: 15px;
+  }
+  
+  .milestone-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .milestone-title {
+    font-size: 1.5rem;
+  }
+  
+  .milestone-description {
+    font-size: 1rem;
+  }
+  
+  .star-decoration {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .baby-img {
+    max-width: 180px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .milestone-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .milestone-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .milestone-title {
+    font-size: 1.3rem;
+  }
+  
+  .milestone-description {
+    font-size: 0.9rem;
+  }
+  
+  /* Adjust star positions for mobile */
+  .top-right, .middle-right {
+    right: 5%;
+  }
+  
+  .bottom-left, .bottom-right {
+    bottom: 5%;
+  }
+}
+
+/* Make sure the viewport meta tag is added to index.html */
+/* 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+*/
+
+/* For very large screens */
+@media (min-width: 1440px) {
+  .home-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* For height-constrained screens */
+@media (max-height: 700px) {
+  .baby-img {
+    max-width: 180px;
+  }
+  
+  .milestones-container {
+    gap: 10px;
+  }
+  
+  .milestone-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* For ultra-narrow screens */
+@media (max-width: 320px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .milestone-icon {
+    width: 60px;
+    height: 60px;
+  }
 }
