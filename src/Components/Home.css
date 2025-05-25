@@ -114,6 +114,38 @@ html, body, #root {
   opacity: 0.8;
 }
 
+.moon-decoration {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('/images/moon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.top-right-moon{
+  top: 10%;
+  left: 15%;
+}
+
+
+.baby-toy {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-image: url('/images/baby-toys.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.top-left-toy{
+  top: 9%;
+  right: 15%;
+}
+
+
 /* Updated and additional star positions */
 .top-left {
   top: 10%;
@@ -136,7 +168,7 @@ html, body, #root {
 }
 
 .bottom-right {
-  bottom: 15%;
+  bottom: 25%;
   right: 5%;
 }
 

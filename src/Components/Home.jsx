@@ -7,6 +7,8 @@ const Home = () => {
       <div className="hero-section">
         <div className="star-decoration top-left"></div>
         <div className="star-decoration top-right"></div>
+        <div className="moon-decoration top-right-moon"></div>
+        <div className="baby-toy top-left-toy"></div>
         <div className="baby-illustration">
           <img
             src="/images/baby.png"
@@ -14,7 +16,7 @@ const Home = () => {
             className="baby-img"
           />
         </div>
-        <h1 className="main-title">The Journey</h1>
+        <h1 className="main-title">The Nayhaan Journey</h1>
       </div>
 
       <div className="milestones-container">
